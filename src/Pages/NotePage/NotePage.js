@@ -54,14 +54,15 @@ const NotePage = () => {
     }
 
     let handleSubmit = () => {
-        if (params.id != "new" && !note.body) {
-            deleteNote()
+        if (params.id!= "new" && !note.body) {
+            deleteNote();
         } else if (params.id != "new") {
-            updateNote()
+            updateNote();
         } else if (params.id === 'new' && note !== null) {
-            createNote()
+            createNote();
         }
         navigate('/');
+        
     }
 
     return (
